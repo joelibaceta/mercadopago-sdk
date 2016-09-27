@@ -1,4 +1,3 @@
-require_relative "active_rest/version"
 require_relative "active_rest/configuration"
 require_relative "active_rest/validation"
 require_relative "active_rest/request_triggering"

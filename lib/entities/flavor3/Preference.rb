@@ -3,9 +3,7 @@ module MercadoPago
 
     orrm_method :create, post:  '/checkout/preferences'
     orrm_method :read,   get:   '/checkout/preferences/:id'
-    orrm_method :update, put:   '/checkout/preferences/:id'
-
-    # custom method :method, post: '/whatever'
+    orrm_method :update, put:   '/checkout/preferences/:id' 
 
     define_parameters do
 

@@ -73,7 +73,5 @@ module ActiveRest
     end
     
   end
-  
-  
-  
+
 end
