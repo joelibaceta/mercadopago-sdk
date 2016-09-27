@@ -3,7 +3,7 @@ module MercadoPago
 
     orrm_method :create, post:  '/checkout/preferences'
     orrm_method :read,   get:   '/checkout/preferences/:id'
-    orrm_method :update, put:   '/checkout/preferences/:id' 
+    orrm_method :update, put:   '/checkout/preferences/:id'
 
     define_parameters do
 
@@ -13,7 +13,7 @@ module MercadoPago
       param back_urls: {
             success: String,
             pending: String,
-            failure: string
+            failure: String
       }
 
       param init_point:          String
@@ -22,7 +22,7 @@ module MercadoPago
       param additional_info:     String
       param external_reference:  String
       param notification_url:    String
-      param date_created:        Date
+      param date_created:        String
       param collector_id:        Integer
       param client_id:           Integer
       param marketplace:         String

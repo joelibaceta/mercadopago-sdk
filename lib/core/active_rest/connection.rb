@@ -1,4 +1,4 @@
-module ActiveRest
+module ActiveREST
 
   class TimeoutException < StandardError ; end
   class ConnectionFailedException < StandardError ; end

@@ -1,4 +1,4 @@
-module ActiveRest
+module ActiveREST
   module Configuration
 
     attr_accessor :base_url

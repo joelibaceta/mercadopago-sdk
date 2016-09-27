@@ -2,9 +2,13 @@ require_relative "active_rest/configuration"
 require_relative "active_rest/validation"
 require_relative "active_rest/request_triggering"
 require_relative "active_rest/request"
+require_relative 'active_rest/mapping'
+require_relative 'active_rest/orrm_methods'
 require_relative "active_rest/base"
 
-module ActiveRest
+
+
+module ActiveREST
 
   Config = Struct.new(:base_url)
   

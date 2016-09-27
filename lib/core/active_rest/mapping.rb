@@ -1,29 +1,17 @@
  
-module ActiveRest
+module ActiveREST
   
   module Mapping
     
     module ClassMethods
-      
-      def get(name, url, options = {})
-        _map_call(name, url: url, method: :get,     options:options)
+
+      def orrm_method(method, action)
+        action_method, url = action.first
+        options = {}
+
+        _map_call(method, url: url, method: action_method, options:options)
       end
-      
-      def put(name, url, options = {})
-        _map_call(name, url: url, method: :put,     options:options)
-      end
-      
-      def delete(name, url, options = {})
-        _map_call(name, url: url, method: :delete,  options:options)
-      end
-      
-      def post(name, url, options = {})
-        _map_call(name, url: url, method: :post,    options:options)
-      end
-      
-      def patch(name, url, options = {})
-        _map_call(name, url: url, method: :patch,   options:options)
-      end 
+
       
       def attribute(name, type: String)
         @_attrs[name]
@@ -39,8 +27,9 @@ module ActiveRest
       def define_parameters(&block); yield; end
 
       def param(definition)
-        name, type = definition
-        _params[name.is_a? Symbol ? name : name.to_sym] = type
+        name, type = definition.first
+        name = name.class == Symbol ? name : name.to_sym
+        _params[name] = type
       end
       
       def _calls; @_calls; end

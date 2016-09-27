@@ -1,12 +1,14 @@
-require_relative 'mapping' 
 
 
-module ActiveRest
+
+module ActiveREST
   
   class Base
     include Mapping
+    include ORRM_Methods
     include Validation
     include RequestTriggering
+
     
     attr_accessor :_headers
     
@@ -39,9 +41,11 @@ module ActiveRest
           @attributes[name_sym]
         else
           if mapped = self.class._mapped_method(name_sym)
+
             #raise ValidationFailedException.new unless valid?
-            request = Request.new(mapped, self, args.first)
-            request.call
+            #request = Request.new(mapped, self, args.first)
+            #request.call
+
           elsif self.class.whiny_missing
             raise NoAttributeException.new("Missing attribute #{name_sym}")
           else

@@ -1,8 +1,11 @@
 require 'spec_helper'
 
-describe Preference do
+describe 'Preference' do
 
   context 'Testing the Structure' do
+
+    preference = MercadoPago::Preference.new()
+    p preference
 
   end
 

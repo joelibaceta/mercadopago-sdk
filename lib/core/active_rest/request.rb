@@ -1,6 +1,6 @@
 require 'net/http'
 
-module ActiveRest
+module ActiveREST
   class Request 
     
     VERB_MAP = {

@@ -1,4 +1,4 @@
-module ActiveRest
+module ActiveREST
   class ConnectionManager
 
     def self.reset!

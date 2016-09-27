@@ -1,5 +1,5 @@
 
-module ActiveRest
+module ActiveREST
 
   module RequestTriggering
 
